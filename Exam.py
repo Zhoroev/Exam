@@ -4,7 +4,7 @@
 #4 set
 #5 None
 #6 list
-#7 c 1 до 5 str, c 5 до 10 включительно int
+#7 int
 #8 str
 #9 list
 #10 str
