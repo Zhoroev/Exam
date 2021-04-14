@@ -1,11 +1,10 @@
-def func(deposit, month, percent):
-    sum_for_all_month = [(percent / 100) / 12 * deposit + deposit]
-    for i in range(month - 1):
-        for j in sum_for_all_month:
-            sum_for_month = (percent / 100) / 12 * j + j
-            sum_for_all_month.clear()
-            sum_for_all_month.append(sum_for_month)
-    return sum(sum_for_all_month)
+def func(deposit, sum_for_all_month, percent):
+    sum_for_month = deposit
+    month = 0
+    while sum_for_month < sum_for_all_month:
+        month += 1
+        sum_for_month += (percent / 100) / 12 * sum_for_all_month
+    return month
 
 
-print(int(func(1000000, 6, 12)))
+print(int(func(1000000, 1061520, 12)))
